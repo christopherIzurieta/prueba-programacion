@@ -1,0 +1,261 @@
+/* ===== ESTILOS GENERALES ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f6f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0077b6;
+  color: #fff;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.logo h1 span {
+  color: #ffdd00;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li a, .nav-links li button {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-links li a:hover {
+  color: #ffdd00;
+}
+
+.nav-links li button {
+  background: #ffb703;
+  color: #000;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+#menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(135deg, #90e0ef, #00b4d8);
+  padding: 80px 20px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: #fff;
+  text-align: left;
+}
+
+.hero .text {
+  max-width: 450px;
+}
+
+.hero h2 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.hero-img img {
+  width: 350px;
+  border-radius: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.btn {
+  background: #023e8a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #03045e;
+}
+
+/* ===== SERVICIO ===== */
+.servicio {
+  background: #fff;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.servicio h2 {
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+.servicio p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #444;
+}
+
+.servicio-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 15px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card img, .card video {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ===== NECESIDAD ===== */
+.necesidad {
+  background: #caf0f8;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.necesidad .text {
+  max-width: 450px;
+}
+
+.necesidad img {
+  width: 350px;
+  border-radius: 20px;
+}
+
+/* ===== CONTACTO ===== */
+.contacto {
+  background: #f8f9fa;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contacto input, .contacto textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.contacto button {
+  background: #00b4d8;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.contacto-img img {
+  margin-top: 30px;
+  width: 300px;
+  border-radius: 20px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #023e8a;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #0077b6;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  .hero-content, .necesidad {
+    flex-direction: column;
+  }
+
+  .hero-img img, .necesidad img {
+    width: 80%;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
